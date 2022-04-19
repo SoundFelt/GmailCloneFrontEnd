@@ -14,7 +14,7 @@ function App() {
   const [totalEmailsSent, setTotalEmailsSent] = useState()
   const [sentEmailList, setSentEmailList] = useState()
   const [emailJustSent, setEmailJustSent] = useState()
-  const [currentUser, setCurrentUser] = useState(JSON.parse(window.sessionStorage.getItem('user')) || '')
+  // const [currentUser, setCurrentUser] = useState(JSON.parse(window.sessionStorage.getItem('user')) || '')
 
   useEffect(() => {
     axios.get('http://localhost:3001').then((response) => {
@@ -24,14 +24,14 @@ function App() {
     })
 }, [emailJustSent])
 
-  useEffect(() => {
-    window.sessionStorage.setItem('user', JSON.stringify(currentUser))
-  })
+  // useEffect(() => {
+  //   window.sessionStorage.setItem('user', JSON.stringify(currentUser))
+  // })
 
   return (
       <div className="app">
-        {!currentUser ? <Login setCurrentUser={setCurrentUser} />
-         : <div style={{height: '100%'}}> 
+        {/*{!currentUser ? <Login setCurrentUser={setCurrentUser} /> : */}
+          <div style={{height: '100%'}}> 
          <Header setSentMailBoxOpen={setSentMailBoxOpen} avatarImage={currentUser.imageUrl} setCurrentUser={setCurrentUser} />
           <div className="app-body">
             <SidebarLeft setSentMailBoxOpen={setSentMailBoxOpen} totalEmailsSent={totalEmailsSent} setEmailJustSent={setEmailJustSent}/>
@@ -40,7 +40,7 @@ function App() {
      
             <SidebarRight/>
           </div>
-          </div> }
+          </div> 
       </div>
   );
 }
