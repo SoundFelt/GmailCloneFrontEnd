@@ -12,7 +12,7 @@ function NewMailBox(props) {
 
     const onSubmit = (formData) => {
         console.log(formData)
-        axios.post('http://localhost:3001', {
+        axios.post('https://gmailclonebackend.herokuapp.com/api', {
             to: formData.to,
             subject: formData.subject,
             message: formData.message,

@@ -20,7 +20,7 @@ function SentMailBox(props) {
       const sentEmailListBeforeDBUpdate = props.sentEmailList.map((email, emailIdx) => emailIdx === idx ? {...email, clicked: 1} : email)
       props.setSentEmailList(sentEmailListBeforeDBUpdate) 
       const emailToUpdate = props.sentEmailList.filter((email) => email.id === id)
-      axios.patch('http://localhost:3001', {id: emailToUpdate[0].id}).then(() => console.log('axios patch success'))
+      axios.patch('https://gmailclonebackend.herokuapp.com/api', {id: emailToUpdate[0].id}).then(() => console.log('axios patch success'))
     }
 
   return (
