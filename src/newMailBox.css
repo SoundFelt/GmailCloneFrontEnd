@@ -1,0 +1,88 @@
+.mailbox-container {
+    position: absolute;
+    bottom: 0;
+    right: 65px;
+    height: 450px;
+    width: 400px;
+    background-color: white;
+    z-index: 10;
+}
+
+.mailbox-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #404040;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 40px;
+}
+
+.mailbox-topbar span {
+    color: white;
+    font-size: 0.9rem;
+    padding-left: 12px;
+    font-weight: 500;
+}
+
+.mailbox-body {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 5px 5px rgba(175, 175, 175, 0.8);
+    padding: 0 3px;
+    height: 91%;
+}
+
+.mailbox-body input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.to-input {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    margin: 0 10px;
+    padding-bottom: 8px;
+    padding-top: 10px;
+}
+
+.to-input label {
+    font-size: 0.9rem;
+    color: rgb(105, 105, 105);
+    padding-right: 5px;
+}
+
+.subject-input {
+    border-bottom: 1px solid rgb(235, 235, 235);
+    margin: 0 10px;
+    padding-bottom: 8px;
+    padding-top: 10px;
+}
+
+.subject-input::placeholder {
+    font-size: 0.9rem;
+    color: rgb(105, 105, 105);
+}
+
+.subject-message {
+    height: 100%;
+}
+
+.subject-message textarea{
+    width: 100%;
+    height: 100%;
+    padding: 12px 12px;
+    outline: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+}
+
+.send-message-bar {
+    padding: 0 0 10px 12px;
+}
+

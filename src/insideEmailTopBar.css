@@ -1,0 +1,63 @@
+.maillist-topbar-container {
+    display: flex;
+    align-items: center;
+    padding: 5px 30px 5px 10px;
+    justify-content: space-between;
+    z-index: 10;
+    width: 100%;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}  
+
+.group-1 {
+    position: relative;
+   
+}
+
+.group-1::after {
+    content: '';
+    display: inline-block;
+    height: 18px;
+    width: 1px;
+    position: absolute;
+    top: 9px;
+    left: 93%;
+    background-color: rgb(226, 226, 226);
+}
+
+.group-2 {
+    position: relative;
+}
+
+.group-2:after {
+    content: '';
+    display: inline-block;
+    height: 18px;
+    width: 1px;
+    position: absolute;
+    top: 9px;
+    left: 91%;
+    background-color: rgb(226, 226, 226);
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-right span {
+    font-size: 0.8rem;
+    color: rgb(107, 107, 107);
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.scroll {
+    box-shadow: 0 4px 6px -6px rgb(200, 200, 200);
+
+}

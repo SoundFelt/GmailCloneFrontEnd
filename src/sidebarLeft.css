@@ -1,0 +1,123 @@
+.main {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+}
+
+.compose-button-container {
+    margin-left: 10px;
+    margin-bottom: 18px;
+}
+
+.compose-button {
+    border-radius: 50px;
+    height: 48px;
+    width: 140px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: rgb(50, 50, 50);
+    font-weight: 400;
+    font-size: 0.95rem;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+    background-color: white;
+    cursor: pointer;
+}
+
+.compose-button img {
+    padding-right: 10px;
+}
+
+.sidebar-upper {
+    overflow-x: hidden;
+    height: 100%;
+
+}
+
+.meet-title {
+    padding-left: 26px;
+    margin-top: 17px;
+    margin-bottom: 5px;
+    color: rgb(50, 50, 50);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.hangout-title {
+    padding-left: 26px;
+    margin-top: 17px;
+    margin-bottom: 6px;
+    color: rgb(50, 50, 50);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.resize-handle {
+    position: absolute;
+    transform: translateY(120%);
+    border-radius: 10px;
+    height: 4px;
+    width: 32px;
+    background-color: lightgrey;
+}
+
+.hangout-section {
+    border-top: 1px solid rgb(235, 235, 235);
+    margin-top: 10px;
+
+}
+
+.hangout-user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 0.85rem;
+    width: 220px;
+}
+
+.hangout-user div {
+    display: flex;
+    align-items: center;
+}
+
+.hangout-section span {
+    margin-left: 5px;
+}
+
+.fake-border {
+    width: 200px;
+    height: 1px;
+    background-color: rgb(235, 235, 235);
+    margin: 5px auto 10px;
+}
+
+.start-chat {
+    font-size: 0.85rem;
+    color: rgb(88, 88, 88);
+    margin: 0;
+    letter-spacing: -0.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+
+.start-chat p {
+    margin: 3px 0;
+}
+
+.start-chat-link {
+    color: rgb(34, 34, 253);
+}
+
+.sidebar-bottom-links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: calc(100% - 531px);
+}
+

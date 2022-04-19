@@ -1,0 +1,82 @@
+.email-container {
+    display: table;
+    border-collapse: collapse;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    cursor: pointer;
+
+    
+}
+
+.email-container:hover{
+    border: 1px solid rgb(220, 220, 220);
+    box-shadow: 0px 2px 5px rgb(220,220,220);
+}
+
+.email-container:hover .checkbox {
+    color: rgb(160,160,160);
+}
+
+.email-container:hover .star-icon {
+    color: rgb(160,160,160);
+}
+
+.icons-email-title {
+    display: flex;
+    align-items: center;
+}
+
+.sender {
+    font-size: 0.9rem;
+    color: rgb(50, 50, 50);
+    font-weight: bold;
+    width: 200px;
+    white-space: nowrap;
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 100px;
+}
+
+.content {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    white-space: nowrap;  
+}
+
+.description {
+    display: table-cell;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 0.9rem;
+    color: rgb(100,100,100);
+}
+
+.subject {
+    font-size: 0.9rem;
+    color: rgb(50, 50, 50);
+    font-weight: bold;
+}
+
+.time {
+    padding: 0 15px 0 45px;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: 0.8rem;
+    color: rgb(50, 50, 50);
+    font-weight: bold;
+}
+
+.clicked {
+    background-color: rgba(235, 235, 235, 0.4);
+}
+
+.text-clicked {
+    font-weight: 400;
+}

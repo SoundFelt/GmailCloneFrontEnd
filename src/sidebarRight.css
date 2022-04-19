@@ -1,0 +1,8 @@
+.sidebar-right-container {
+    border-left: 1px solid whitesmoke;
+}
+
+.icons-container {
+    display: flex;
+    flex-direction: column;
+}

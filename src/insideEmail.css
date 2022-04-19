@@ -1,0 +1,64 @@
+.inside-email-container {
+    flex: 1;
+    overflow: hidden;
+}
+
+.email-body-container{
+    margin-left: 50px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.email-subject {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.email-subject h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #202124;
+    letter-spacing: 0.3px;
+    padding: 5px 0;
+}
+
+.sender-details {
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.time-sent { 
+    font-size: 0.8rem;
+    color: rgb(107, 107, 107);
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.sender-avatar {
+    position: absolute;
+    right: 81.5%;
+    top: 10px;
+}
+
+.sender-name {
+    font-size: .875rem;
+    letter-spacing: .2px;
+    color: #202124;
+    font-weight: bold;
+    
+}
+
+.sender-email {
+    font-size: .75rem;
+    letter-spacing: .3px;
+    color: #555;
+}
+
+.description-body span {
+    font: small/1.5 Arial,Helvetica,sans-serif;
+}

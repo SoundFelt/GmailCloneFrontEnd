@@ -1,0 +1,35 @@
+.maillist-topbar-container {
+    display: flex;
+    align-items: center;
+    margin-left: 1px;
+    justify-content: space-between;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-right span {
+    font-size: 0.8rem;
+    color: rgb(107, 107, 107);
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.scroll {
+    box-shadow: 0 4px 6px -6px rgb(200, 200, 200);
+
+}
+

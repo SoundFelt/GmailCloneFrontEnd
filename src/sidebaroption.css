@@ -1,0 +1,57 @@
+.sidebar-option-container {
+    display: flex;
+    align-items: center;
+    padding: 6px 0 6px 25px;
+    width: 220px;
+    cursor: pointer;
+}
+
+.sidebar-option-container.not-active:hover {
+    background-color: #f3f3f3;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.active {
+    background-color: #fce8e6;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;   
+}
+
+.active h4 {
+    color: #d93025;
+    font-weight: bold;
+}
+
+.active span {
+    color: #d93025;
+    font-weight: bold;
+}
+
+.icon {
+    margin-right: 17px;
+}
+
+.option-title {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgb(50, 50, 50);
+    font-weight: 400;
+    flex: 1;
+}
+
+.option-number {
+    font-size: 0.8rem;
+    color: rgb(50, 50, 50);
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.dropdown {
+    margin-left: 15px;
+}
+
+.animate__animated .option-title {
+    color: #d32121;
+    font-weight: 800;
+}
