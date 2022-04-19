@@ -18,7 +18,7 @@ function Login(props) {
     <div className="login-home">
     <img src={GmailLogo} alt="user-avatar"></img>
     <GoogleLogin
-        clientId={client_id}
+        clientId='215343488574-vejb5arui2n8bf6n85ej6h0h61rg7plt.apps.googleusercontent.com'
         buttonText="Sign in with Google"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
