@@ -17,9 +17,9 @@ function NewMailBox(props) {
             subject: formData.subject,
             message: formData.message,
         }).then(() => console.log('success'))
-        props.setNewMailBoxOpen(false)
-        props.setSentBuzzNotification(true)
         props.setEmailJustSent(true)
+        props.setNewMailBoxOpen(false)
+        props.setSentBuzzNotification(true) 
     }
 
   return (
