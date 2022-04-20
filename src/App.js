@@ -21,6 +21,7 @@ function App() {
         setSentEmailList(response.data.reverse())
         setTotalEmailsSent(response.data.length || 0)
         setEmailJustSent(false)
+        console.log(response.data)
     })
 }, [emailJustSent])
 
