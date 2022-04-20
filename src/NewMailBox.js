@@ -11,7 +11,6 @@ function NewMailBox(props) {
     const {register, handleSubmit} = useForm()
 
     const onSubmit = (formData) => {
-        console.log(formData)
         axios.post('https://gmailclonebackend.herokuapp.com/api', {
             to: formData.to,
             subject: formData.subject,

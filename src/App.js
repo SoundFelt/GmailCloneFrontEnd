@@ -16,14 +16,11 @@ function App() {
   const [emailJustSent, setEmailJustSent] = useState()
   const [currentUser, setCurrentUser] = useState(JSON.parse(window.sessionStorage.getItem('user')) || '')
 
-  console.log(emailJustSent)
-  console.log(sentEmailList)
   useEffect(() => {
     axios.get('https://gmailclonebackend.herokuapp.com/api').then((response) => {
         setSentEmailList(response.data.reverse())
         setTotalEmailsSent(response.data.length || 0)
         setEmailJustSent(false)
-        console.log(response.data)
     })
 }, [emailJustSent])
 
