@@ -10,8 +10,9 @@ function Login(props) {
     const responseGoogle = (response) => {
         if (response.error) {
             alert(`Failed to login. Error: ${response.error}`)
-        }
+        } else {
         props.setCurrentUser(response.profileObj)
+        }
       }
 
   return (

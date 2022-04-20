@@ -14,33 +14,36 @@ function App() {
   const [totalEmailsSent, setTotalEmailsSent] = useState()
   const [sentEmailList, setSentEmailList] = useState()
   const [emailJustSent, setEmailJustSent] = useState()
-  // const [currentUser, setCurrentUser] = useState(JSON.parse(window.sessionStorage.getItem('user')) || '')
+  const [currentUser, setCurrentUser] = useState(JSON.parse(window.sessionStorage.getItem('user')) || '')
 
+  console.log(emailJustSent)
+  console.log(sentEmailList)
   useEffect(() => {
     axios.get('https://gmailclonebackend.herokuapp.com/api').then((response) => {
         setSentEmailList(response.data.reverse())
         setTotalEmailsSent(response.data.length || 0)
         setEmailJustSent(false)
+        console.log('app .get just ran')
     })
 }, [emailJustSent])
 
-  // useEffect(() => {
-  //   window.sessionStorage.setItem('user', JSON.stringify(currentUser))
-  // })
+  useEffect(() => {
+    window.sessionStorage.setItem('user', JSON.stringify(currentUser))
+  })
 
   return (
       <div className="app">
-        {/*{!currentUser ? <Login setCurrentUser={setCurrentUser} /> : */}
+        {!currentUser ? <Login setCurrentUser={setCurrentUser} /> : 
           <div style={{height: '100%'}}> 
-         <Header setSentMailBoxOpen={setSentMailBoxOpen} />
+         <Header setSentMailBoxOpen={setSentMailBoxOpen} setCurrentUser={setCurrentUser}/>
           <div className="app-body">
             <SidebarLeft setSentMailBoxOpen={setSentMailBoxOpen} totalEmailsSent={totalEmailsSent} setEmailJustSent={setEmailJustSent}/>
           
              {sentMailBoxOpen ? <SentMailBox sentEmailList={sentEmailList} setSentEmailList={setSentEmailList}/> : <MailList /> }
      
-            <SidebarRight/>
-          </div>
+            <SidebarRight/> 
           </div> 
+          </div> }
       </div>
   );
 }
