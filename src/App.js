@@ -16,13 +16,19 @@ function App() {
   const [emailJustSent, setEmailJustSent] = useState()
   const [currentUser, setCurrentUser] = useState(JSON.parse(window.sessionStorage.getItem('user')) || '')
 
-  useEffect(() => {
-    axios.get('https://gmailclonebackend.herokuapp.com/api').then((response) => {
+  const getEmailList = () => {
+        axios.get('https://gmailclonebackend.herokuapp.com/api').then((response) => {
         setSentEmailList(response.data.reverse())
         setTotalEmailsSent(response.data.length || 0)
         setEmailJustSent(false)
         console.log(response.data)
     })
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      getEmailList()
+    }, 2000)
 }, [emailJustSent])
 
   useEffect(() => {
