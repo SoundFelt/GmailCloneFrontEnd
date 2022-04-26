@@ -5,8 +5,12 @@ import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
 import {useForm} from 'react-hook-form';
 import axios from 'axios'
+import {useContext} from 'react'
+import SentEmailContext from './Contexts/sentEmailContext'
 
 function NewMailBox(props) {
+
+    const {setEmailJustSent} = useContext(SentEmailContext)
 
     const {register, handleSubmit} = useForm()
 
@@ -16,7 +20,12 @@ function NewMailBox(props) {
             subject: formData.subject,
             message: formData.message,
         }).then(() => console.log('success'))
-        props.setEmailJustSent(true)
+        // axios.post('http://localhost:3001/api', {
+        //     to: formData.to,
+        //     subject: formData.subject,
+        //     message: formData.message,
+        // }).then(() => console.log('success'))
+        setEmailJustSent(true)
         props.setNewMailBoxOpen(false)
         props.setSentBuzzNotification(true) 
     }

@@ -63,7 +63,7 @@ function SidebarLeft(props) {
                 </button>
             </div>
 
-            {newMailBoxOpen && <NewMailBox setNewMailBoxOpen={setNewMailBoxOpen} setSentBuzzNotification={setSentBuzzNotification} setEmailJustSent={props.setEmailJustSent} />}
+            {newMailBoxOpen && <NewMailBox setNewMailBoxOpen={setNewMailBoxOpen} setSentBuzzNotification={setSentBuzzNotification}/>}
 
             <div>     
                 <div className="sidebar-upper">

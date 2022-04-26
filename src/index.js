@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {SentEmailProvider} from './Contexts/sentEmailContext'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SentEmailProvider>
+      <App />
+    </SentEmailProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
